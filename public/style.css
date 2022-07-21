@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+button {
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border-radius: 0.6em;
+    cursor: pointer;
+    display: flex;
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 0.8em 2em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+input[type=text]{
+    width:100%;
+    border:2px solid #aaa;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    border-radius: 0.6em;
+}
+
+input[type=text]:focus{
+    border-color:#3498db;
+    box-shadow:0 0 8px 0 #3498db;
+}
+.app {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    display: flex;
+    justify-content: space-around;
+}
+.app > .screen {
+    display: none;
+}
+.app > .screen.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.screen .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.screen .form-input {
+    width: 100%;
+    margin: 20px 0;
+}
+.screen h2 {
+    font-size: 30px;
+    color: black;
+}
+.screen .form-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+.screen .form-input input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid grey;
+}
+.screen .form-input button, .exit-button, .send-button {
+    padding: 10px 20px;
+    font-size:16px;
+    cursor:pointer;
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+}
+
+.screen .form-input button:hover, .exit-button:hover, .send-button:hover {
+    box-shadow: 0 0 10px 0 #3498db inset;
+    color: black;
+}
+.header {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+    border-bottom: 1px solid #eee;
+}
+.messages {
+    width: 100%;
+    height: calc(100% - 125px);
+    background: white;
+    overflow: auto;
+}
+.message {
+    display: flex;
+    padding: 0 15px;
+}
+.message > div {
+    position: relative;
+    margin: 7px 0 7px 20px;
+    padding: 10px;
+    background-color: #A8DDFD;
+    width: 200px;
+    text-align: left;
+    font: 400 .9em 'Open Sans', sans-serif;
+    border: 1px solid #97C6E3;
+    border-radius: 10px;
+}
+.message.my-message {
+    justify-content: flex-end;
+}
+.message.my-message > div {
+    background-color: #A8DDFD;
+}
+.message.other-message {
+    justify-content: flex-start;
+}
+.message.other-message > div {
+    background-color: #eee;
+}
+.name {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 5px;
+}
+.text {
+    word-wrap: break-word;
+}
+.update {
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+}
+.typebox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.typebox input {
+    height: 40px;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.logo {
+    font-size: 25px;
+}
+
